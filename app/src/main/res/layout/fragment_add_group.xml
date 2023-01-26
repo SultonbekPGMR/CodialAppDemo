@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.group.AddGroup">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#FFB800">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="#FFFFFF" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Yangi guruh qo'shish"
+            android:textColor="#1A4E79"
+            android:textSize="22sp" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_name"
+        style="@style/TextInputLayoutStyle"
+        app:hintTextColor="@color/blue"
+        app:endIconTint="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guruh nomi"
+        app:endIconMode="clear_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:endIconTint="@color/blue"
+        android:hint="Mentor"
+        app:boxStrokeColor="@color/blue"
+        app:hintTextColor="@color/blue"
+        tools:ignore="HardcodedText">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinner_mentor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        app:endIconTint="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Vaqti"
+        app:boxStrokeColor="@color/blue"
+        app:hintTextColor="@color/blue"
+        tools:ignore="HardcodedText">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinner_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        app:endIconTint="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Kunlari"
+        app:boxStrokeColor="@color/blue"
+        app:hintTextColor="@color/blue"
+        tools:ignore="HardcodedText">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinner_day"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:inputType="none"
+            android:textSize="20sp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:id="@+id/coordinate_layout"/>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:text="Saqlash"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/yellow"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:layout_gravity="end"/>
+
+
+</LinearLayout>
